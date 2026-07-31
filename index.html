@@ -495,6 +495,9 @@ body.nav-open{overflow:hidden}
 .shot{
   position:relative;aspect-ratio:1/1;border-radius:var(--radius);overflow:hidden;
   display:grid;place-items:center;box-shadow:var(--shadow-s);
+  /* A grid item that has an aspect-ratio stops stretching on its own (justify-self
+     falls back to start), so the tile would shrink to its placeholder icon. */
+  width:100%;
 }
 .shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .5s ease}
 .shot:hover img{transform:scale(1.06)}
