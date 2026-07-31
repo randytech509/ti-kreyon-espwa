@@ -1,6 +1,6 @@
 # Ti kreyon espwa — website
 
-Single-page site for the Haitian NGO **Ti kreyon espwa** (Carrefour, Haiti).
+Single-page site for the Haitian NGO **Ti kreyon espwa** (Haiti).
 Motto: *« Chak timoun gen yon bèl istwa pou l ekri. »* — Every child has a beautiful story to write.
 
 ```
@@ -25,11 +25,10 @@ Search `index.html` for `REPLACE` — every placeholder is flagged with a commen
 | Contact form endpoint | `<form id="contactForm" action=...>` | `https://formspree.io/f/YOUR_FORM_ID` |
 | PayPal donation link | Support section, "Give with PayPal" | `paypal.com/paypalme/REPLACE-ME` |
 | Bank details | Support section, `.bank` list | Bank, account no., SWIFT |
-| Donation phone line | Support section + `tel:` link | `+509 0000 0000` / `tel:+50900000000` |
+| ~~Donation phone line~~ | done — `+1 407 664 0650` (donation line, contact block, WhatsApp, JSON-LD) | — |
 | ~~Email~~ | done — `administration@tikreyonespwa.org` (Namecheap PrivateEmail) | — |
-| Phone / WhatsApp | Contact block, footer, socials | `+509 0000 0000`, `wa.me/50900000000` |
 | Facebook / Instagram | `.socials` | `REPLACE-ME` |
-| Exact address | Contact block | `Carrefour, Ouest, Haiti` |
+| Exact address | Contact block, footer, JSON-LD | `Haiti` — add a city or street only if you want it public |
 
 Impact counters and testimonials are **not** placeholders any more — they were removed, see §2.
 

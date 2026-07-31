@@ -8,7 +8,7 @@ real texture, no plastic "stock photo" gloss.
 
 - **Dignity, never misery.** Children are actors of their own story: standing, engaged, doing something.
   No dirt-as-decoration, no pity framing, no adult saviour towering over a child.
-- **Real Haiti.** Caribbean light, tropical vegetation, tin roofs, coloured walls, dust of Carrefour —
+- **Real Haiti.** Caribbean light, tropical vegetation, tin roofs, coloured walls, Haitian dust —
   not a generic "Africa" backdrop.
 - Colour palette should echo the brand: azure `#0077B6`, sun yellow `#FFB703`, leaf green `#2A9D8F`.
 - Add to any generator that supports negatives:
@@ -22,7 +22,7 @@ real texture, no plastic "stock photo" gloss.
 
 > Warm documentary photograph of a Haitian child, around 8 years old, smiling openly while holding a
 > yellow pencil above an open notebook. Bright natural morning light, shallow depth of field. Behind them,
-> softly blurred, a sunlit Caribbean street in Carrefour, Haiti: pastel painted walls, green foliage, blue sky.
+> softly blurred, a sunlit Caribbean street in Haiti: pastel painted walls, green foliage, blue sky.
 > The child looks directly at the camera with confidence and joy. Vivid azure blue and sunny yellow tones,
 > photojournalistic style, 50mm lens, natural skin texture, no studio lighting.
 > `--ar 16:9`
@@ -66,7 +66,7 @@ so keep the child slightly **right of centre** and leave the left third visually
 
 > Warm documentary photograph of a group of about twelve Haitian children of different ages walking together
 > along a dirt road, laughing, school bags on their shoulders, arms around each other. Behind them the green
-> hills of Carrefour and a wide sky at golden hour, backlit by low warm sunlight. Sense of community,
+> Haitian hills and a wide sky at golden hour, backlit by low warm sunlight. Sense of community,
 > forward movement and hope. Vivid natural colours, slight lens flare, photojournalistic, 50mm.
 > `--ar 16:9`
 
