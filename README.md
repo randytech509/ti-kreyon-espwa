@@ -26,7 +26,7 @@ Search `index.html` for `REPLACE` — every placeholder is flagged with a commen
 | PayPal donation link | Support section, "Give with PayPal" | `paypal.com/paypalme/REPLACE-ME` |
 | Bank details | Support section, `.bank` list | Bank, account no., SWIFT |
 | Donation phone line | Support section + `tel:` link | `+509 0000 0000` / `tel:+50900000000` |
-| Email | Contact block, footer, JS fallback message | `contact@tikreyonespwa.org` |
+| ~~Email~~ | done — `administration@tikreyonespwa.org` (Namecheap PrivateEmail) | — |
 | Phone / WhatsApp | Contact block, footer, socials | `+509 0000 0000`, `wa.me/50900000000` |
 | Facebook / Instagram | `.socials` | `REPLACE-ME` |
 | Exact address | Contact block | `Carrefour, Ouest, Haiti` |
