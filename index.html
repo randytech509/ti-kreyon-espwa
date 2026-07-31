@@ -1278,8 +1278,8 @@ body{top:0!important}
       </div>
 
       <div class="contact-grid">
-        <!-- REPLACE: action="https://formspree.io/f/YOUR_FORM_ID" -->
-        <form class="form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <!-- Envoi par /api/contact (fonction Vercel + Resend), sans redirection -->
+        <form class="form reveal" id="contactForm" action="/api/contact" method="POST" novalidate>
           <div class="field">
             <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="name" name="name" autocomplete="name" required maxlength="80" placeholder="Jean-Baptiste Pierre">
@@ -1308,7 +1308,7 @@ body{top:0!important}
             <label for="website">Do not fill this field</label>
             <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
           </div>
-          <input type="hidden" name="_subject" value="New message from tikreyonespwa.org">
+          <input type="hidden" name="lang" value="en">
 
           <button class="btn btn--azure" type="submit" id="submitBtn">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
@@ -1686,7 +1686,7 @@ body{top:0!important}
     }, 200);
   };
 
-  /* ---------- Contact form (Formspree, no redirect) ---------- */
+  /* ---------- Contact form (posts to /api/contact, no redirect) ---------- */
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");
   var submitBtn = document.getElementById("submitBtn");
@@ -1695,6 +1695,16 @@ body{top:0!important}
   var say = function (msg, ok) {
     status.textContent = msg;
     status.className = "form-status " + (ok ? "is-ok" : "is-err");
+  };
+
+  // Codes renvoyés par /api/contact
+  var FORM_ERRORS = {
+    not_configured: "The form is not connected yet. Please email us at administration@tikreyonespwa.org in the meantime.",
+    too_many_requests: "You have already sent several messages. Please try again in a few minutes.",
+    missing_fields: "Please fill in your name, a valid email and a message of at least ten characters.",
+    bad_email: "That email address does not look valid. Please check it and try again.",
+    looks_like_spam: "Your message contains too many links. Please remove some and try again.",
+    _default: "Something went wrong. Please try again, or email us at administration@tikreyonespwa.org."
   };
 
   form.addEventListener("submit", function (e) {
@@ -1706,29 +1716,26 @@ body{top:0!important}
       return;
     }
 
-    if (form.action.indexOf("YOUR_FORM_ID") > -1) {
-      say("The form is not connected yet. Please email us at administration@tikreyonespwa.org in the meantime.", false);
-      return;
-    }
-
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
     status.className = "form-status";
 
+    var payload = {};
+    new FormData(form).forEach(function (value, key) { payload[key] = value; });
+
     fetch(form.action, {
       method: "POST",
-      body: new FormData(form),
-      headers: { Accept: "application/json" }
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload)
     }).then(function (res) {
-      if (res.ok) {
-        form.reset();
-        say("Thank you. Your message reached us — we will reply within two days.", true);
-      } else {
-        return res.json().then(function (data) {
-          var detail = data && data.errors ? data.errors.map(function (x) { return x.message; }).join(", ") : "";
-          say(detail || "Something went wrong. Please try again or email us directly.", false);
-        });
-      }
+      return res.json().catch(function () { return {}; }).then(function (data) {
+        if (res.ok && data.ok) {
+          form.reset();
+          say("Thank you. Your message reached us — we will reply within two days.", true);
+          return;
+        }
+        say(FORM_ERRORS[data.error] || FORM_ERRORS._default, false);
+      });
     }).catch(function () {
       say("Network error. Please check your connection or email us at administration@tikreyonespwa.org.", false);
     }).then(function () {

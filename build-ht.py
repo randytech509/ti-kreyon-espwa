@@ -178,8 +178,9 @@ def main():
          '<meta property="og:url" content="https://tikreyonespwa.org/ht">'),
         ('<meta property="og:locale" content="en_US">',
          '<meta property="og:locale" content="ht_HT">'),
-        ('value="New message from tikreyonespwa.org"',
-         'value="New message from tikreyonespwa.org (Kreyòl)"'),
+        # L'e-mail reçu indique depuis quelle page le message a été envoyé
+        ('<input type="hidden" name="lang" value="en">',
+         '<input type="hidden" name="lang" value="ht">'),
         # Le widget Google ne tourne pas ici
         ('<div id="google_translate_element" inert aria-hidden="true"></div>\n', ''),
     ]

@@ -22,7 +22,7 @@ Search `index.html` for `REPLACE` — every placeholder is flagged with a commen
 
 | What | Where | Current placeholder |
 |---|---|---|
-| Contact form endpoint | `<form id="contactForm" action=...>` | `https://formspree.io/f/YOUR_FORM_ID` |
+| ~~Contact form~~ | done — POST vers `/api/contact`, voir §3 | — |
 | PayPal donation link | Support section, "Give with PayPal" | `paypal.com/paypalme/REPLACE-ME` |
 | Bank details | Support section, `.bank` list | Bank, account no., SWIFT |
 | ~~Donation phone line~~ | done — `+1 407 664 0650` (donation line, contact block, WhatsApp, JSON-LD) | — |
@@ -32,11 +32,8 @@ Search `index.html` for `REPLACE` — every placeholder is flagged with a commen
 
 Impact counters and testimonials are **not** placeholders any more — they were removed, see §2.
 
-**Formspree setup:** create a free form on [formspree.io](https://formspree.io), copy the endpoint
-(`https://formspree.io/f/xxxxxxx`) into the form's `action`. Nothing else to do — the JS posts with
-`fetch` and shows the result inline, so the visitor never leaves the page. Until you paste a real
-endpoint, the form politely tells the visitor to email instead. The honeypot field (`_gotcha`) is
-already wired for spam.
+Le formulaire de contact n'utilise plus de service tiers : il poste sur `/api/contact`,
+une fonction Vercel qui envoie l'e-mail via Resend (§3).
 
 ---
 
@@ -63,7 +60,42 @@ Three things were removed for the same reason and must not come back invented:
 
 ---
 
-## 3. Images
+## 3. Formulaire de contact — `/api/contact`
+
+`api/contact.js` reçoit le formulaire des deux pages et envoie le message à l'ONG via
+[Resend](https://resend.com). Aucune dépendance npm : `fetch` est natif sur le runtime Node de Vercel.
+
+**Variables d'environnement** (Vercel → Settings → Environment Variables) :
+
+| Variable | Obligatoire | Rôle |
+|---|---|---|
+| `RESEND_API_KEY` | oui | clé API Resend (`re_…`). Sans elle l'endpoint répond `503 not_configured` et le site invite le visiteur à écrire directement. |
+| `CONTACT_TO` | non | destinataire, défaut `administration@tikreyonespwa.org` |
+| `RESEND_FROM` | non | expéditeur, défaut `Ti kreyon espwa <onboarding@resend.dev>` |
+
+**Séquence de mise en service :**
+
+1. Créer un compte sur resend.com, générer une clé API, la coller dans `RESEND_API_KEY`.
+2. Tant que le domaine n'est pas vérifié chez Resend, `onboarding@resend.dev` **n'accepte comme
+   destinataire que l'adresse du compte Resend** : mettre cette adresse dans `CONTACT_TO` pour
+   tester tout de suite.
+3. Une fois `tikreyonespwa.org` pointé sur Vercel, ajouter le domaine dans resend.com/domains,
+   poser les enregistrements DNS chez Namecheap, puis passer `RESEND_FROM` à
+   `Ti kreyon espwa <sit@tikreyonespwa.org>` et `CONTACT_TO` à `administration@tikreyonespwa.org`.
+
+**Ce que fait l'endpoint** : refuse tout sauf POST ; répond `200` sans rien envoyer si le champ
+piège `_gotcha` est rempli (le robot croit avoir réussi) ; valide nom, e-mail et longueur du
+message ; rejette au-delà de deux liens ; limite à 4 envois par IP toutes les 10 minutes ; échappe
+le HTML du message ; met le visiteur en `reply_to`, si bien qu'un simple « Répondre » lui écrit
+directement. Le champ caché `lang` indique si le message vient de la page anglaise ou kreyòle.
+
+La limite par IP est en mémoire : Vercel peut faire tourner plusieurs instances et les recycler,
+elle freine un robot bavard mais ne remplace pas un compteur partagé. Si le spam passe, l'étape
+suivante est Cloudflare Turnstile.
+
+---
+
+## 4. Images
 
 The 10 images are **already in place** in `assets/img/` (generated with `IMAGE-PROMPTS.md`):
 
@@ -96,15 +128,28 @@ rules.
 
 ---
 
-## 4. Translation
+## 5. Translation
 
-The header language menu writes the `googtrans` cookie and drives the hidden Google widget
-(`en, ht, fr, es`). The chosen language is remembered in `localStorage`.
+**Le kreyòl est une vraie page**, `/ht`, écrite à la main par le fondateur et générée par
+`build-ht.py` depuis `index.html` + `translations_ht.csv` :
 
-Two things to know:
+```bash
+python3 build-ht.py     # regénère ht/index.html
+```
 
-- **It needs a real HTTP origin.** Opening `index.html` with `file://` loads the page fine but the
-  translator will not run. Test with a local server (below) or once deployed.
+Le script échoue en nommant le segment fautif si une phrase anglaise a changé sans que le CSV
+suive — les deux pages ne peuvent pas diverger en silence. **Toute modification de contenu se fait
+dans `index.html`, jamais dans `ht/index.html`**, qui est un fichier généré.
+
+Français et espagnol passent encore par le widget Google (`en, fr, es`), piloté par le cookie
+`googtrans` ; le choix est mémorisé en `localStorage`. Depuis `/ht`, les entrées « Fransè » et
+« Panyòl » renvoient sur `/?lang=fr|es` : Google traduit donc toujours depuis l'anglais, sa
+meilleure source, jamais depuis le kreyòl.
+
+Deux choses à savoir :
+
+- **Le widget exige une vraie origine HTTP.** Ouvrir `index.html` en `file://` affiche la page mais
+  la traduction ne tourne pas. Tester via un serveur local (plus bas) ou une fois déployé.
 - Brand names — *Ti kreyon espwa*, *Sak Lekòl*, *Vant Plen*, the Creole motto, phone numbers, bank
   details — carry `translate="no"` / `class="notranslate"` so Google leaves them intact.
 
@@ -112,7 +157,7 @@ Everything else on the page works normally if the Google script is blocked or fa
 
 ---
 
-## 5. Run locally
+## 6. Run locally
 
 ```bash
 cd ~/dev/ti-kreyon-espwa
@@ -120,7 +165,7 @@ python3 -m http.server 8080
 # then open http://localhost:8080
 ```
 
-## 6. Deploy — Vercel + Namecheap
+## 7. Deploy — Vercel + Namecheap
 
 There is no backend and no build step: Vercel serves the folder as-is (`vercel.json` sets a long
 cache on `assets/` and no cache on the HTML, so a content fix is live immediately).
@@ -143,12 +188,11 @@ Other static hosts work too (GitHub Pages, Hostinger `public_html/`) — it is p
 
 ---
 
-## 7. Possible next steps
+## 8. Possible next steps
 
-- **Real multilingual content** instead of machine translation: hand-written EN / HT / FR versions
-  (`/index.html`, `/ht/`, `/fr/`) with `hreflang` tags. Better for SEO and for the Creole nuance
-  Google gets wrong. The Cloud Translation API (paid, needs a key) is *not* a good fit here — a key
-  in static HTML is public; it would require a small server proxy.
+- **Une version française écrite à la main**, sur le modèle de `/ht` : traduire
+  `translations_ht.csv` en `translations_fr.csv`, dupliquer `build-ht.py`. Google resterait alors
+  pour l'espagnol seulement. Le kreyòl est déjà fait — c'était le plus urgent, Google le traduit mal.
 - A **stories blog** — one page per child's drawing or letter; that is the emotional engine of the site.
 - **Annual report page** with the financial breakdown (strong trust signal for corporate partners).
 - **Recurring donations** (PayPal subscription button or Stripe payment link) for the sponsorship program.
