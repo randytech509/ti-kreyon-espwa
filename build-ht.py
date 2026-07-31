@@ -77,7 +77,7 @@ def restore_scripts(doc, blocks):
 LANG_MENU_HT = """        <ul class="lang__menu" id="langMenu" role="menu" aria-labelledby="langToggle">
           <li role="none"><a role="menuitem" href="/" hreflang="en" lang="en">English <span class="lang__native">English</span>
             <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></a></li>
-          <li role="none"><a role="menuitem" href="/ht/" hreflang="ht" lang="ht" aria-current="true">Kreyòl ayisyen <span class="lang__native">Kreyòl</span>
+          <li role="none"><a role="menuitem" href="/ht" hreflang="ht" lang="ht" aria-current="true">Kreyòl ayisyen <span class="lang__native">Kreyòl</span>
             <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></a></li>
           <li role="none"><a role="menuitem" href="/?lang=fr" hreflang="fr" lang="fr">Fransè <span class="lang__native">Français</span>
             <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></a></li>
@@ -173,9 +173,9 @@ def main():
     edits = [
         ('<html lang="en">', '<html lang="ht">'),
         ('<link rel="canonical" href="https://tikreyonespwa.org/">',
-         '<link rel="canonical" href="https://tikreyonespwa.org/ht/">'),
+         '<link rel="canonical" href="https://tikreyonespwa.org/ht">'),
         ('<meta property="og:url" content="https://tikreyonespwa.org/">',
-         '<meta property="og:url" content="https://tikreyonespwa.org/ht/">'),
+         '<meta property="og:url" content="https://tikreyonespwa.org/ht">'),
         ('<meta property="og:locale" content="en_US">',
          '<meta property="og:locale" content="ht_HT">'),
         ('value="New message from tikreyonespwa.org"',
@@ -211,7 +211,7 @@ def main():
     # ---- ajustements dans les <script> (restaurés intacts) -----------------
     js_edits = [
         ('<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>\n', ''),
-        ('"url": "https://tikreyonespwa.org/",', '"url": "https://tikreyonespwa.org/ht/",'),
+        ('"url": "https://tikreyonespwa.org/",', '"url": "https://tikreyonespwa.org/ht",'),
         ('"slogan": "Every child has a beautiful story to write",',
          '"slogan": "Chak timoun gen yon bèl istwa pou l ekri",'),
     ]
