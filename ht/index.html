@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ht">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ti kreyon espwa — Every child has a beautiful story to write</title>
-<meta name="description" content="Ti kreyon espwa is a Haitian NGO supporting vulnerable children across Haiti with education, nutrition and creative expression.">
+<title>Ti kreyon espwa — « Chak timoun gen yon bèl istwa pou l ekri »</title>
+<meta name="description" content="Ti kreyon espwa se yon ONG ayisyen k ap sipòte timoun ki vilnerab toupatou an Ayiti nan edikasyon, nitrisyon ak ekspresyon kreyatif.">
 <meta name="theme-color" content="#0077B6">
 
 <!-- Canonical domain: tikreyonespwa.org (registered at Namecheap, served by Vercel).
      Facebook and WhatsApp ignore relative image paths — these MUST stay absolute. -->
-<link rel="canonical" href="https://tikreyonespwa.org/">
+<link rel="canonical" href="https://tikreyonespwa.org/ht/">
 <link rel="alternate" hreflang="en" href="https://tikreyonespwa.org/">
 <link rel="alternate" hreflang="ht" href="https://tikreyonespwa.org/ht/">
 <link rel="alternate" hreflang="x-default" href="https://tikreyonespwa.org/">
@@ -17,19 +17,19 @@
 <!-- Open Graph / social sharing -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ti kreyon espwa">
-<meta property="og:url" content="https://tikreyonespwa.org/">
-<meta property="og:title" content="Ti kreyon espwa — Every child has a beautiful story to write">
-<meta property="og:description" content="Education, nutrition and creative expression for vulnerable children in Haiti.">
+<meta property="og:url" content="https://tikreyonespwa.org/ht/">
+<meta property="og:title" content="Ti kreyon espwa — « Chak timoun gen yon bèl istwa pou l ekri »">
+<meta property="og:description" content="Edikasyon, nitrisyon ak ekspresyon kreyatif pou timoun ki vilnerab an Ayiti.">
 <meta property="og:image" content="https://tikreyonespwa.org/assets/img/hero.jpg">
-<meta property="og:image:alt" content="Illustration: a smiling Haitian child holding a pencil over an open notebook">
-<meta property="og:locale" content="en_US">
+<meta property="og:image:alt" content="Ilistrasyon: yon timoun ayisyen ki souri, k ap kenbe yon kreyon anlè yon kaye ki louvri">
+<meta property="og:locale" content="ht_HT">
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- The hero photo is a CSS background: tell the browser to fetch it straight away -->
-<link rel="preload" as="image" href="assets/img/hero.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/img/hero.jpg" fetchpriority="high">
 
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,7 +183,7 @@ li{margin-bottom:.35em}
 }
 .nav a:hover{background:var(--azure-050);color:var(--azure-900)}
 .nav a.is-active{color:var(--azure-900);background:var(--azure-050)}
-.nav__donate{display:none} /* the header already has a Donate button on desktop */
+.nav__donate{display:none} /* the header already has a Fè don button on desktop */
 
 .header__actions{display:flex;align-items:center;gap:.6rem}
 
@@ -281,7 +281,7 @@ body.nav-open{overflow:hidden}
   .nav.is-open a:nth-child(6){transition-delay:.25s}
   .nav.is-open a:nth-child(7){transition-delay:.29s}
   .nav a:active{transform:scale(.985)}
-  /* Donate stays reachable in one tap once the header button is gone */
+  /* Fè don stays reachable in one tap once the header button is gone */
   .nav__donate,.nav a.nav__donate:hover{
     display:block;margin-top:.7rem;text-align:center;
     background:var(--sun);color:#3A2A00;font-weight:800;
@@ -323,7 +323,7 @@ body.nav-open{overflow:hidden}
 /* Photo layer: shows through as soon as assets/img/hero.jpg exists */
 .hero__photo{
   position:absolute;inset:0;z-index:-2;
-  background-image:url("assets/img/hero.jpg");
+  background-image:url("/assets/img/hero.jpg");
   background-size:cover;background-position:70% 32%;
 }
 /* Dense behind the text on the left, almost clear over the photo on the right */
@@ -394,7 +394,7 @@ body.nav-open{overflow:hidden}
 }
 
 /* ============================================================
-   Mission & vision
+   Misyon & vision
    ============================================================ */
 .duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem}
 .card{
@@ -422,7 +422,7 @@ body.nav-open{overflow:hidden}
 .value span{font-size:.92rem;color:var(--ink-soft);line-height:1.55}
 
 /* ============================================================
-   Programs
+   Pwogram
    ============================================================ */
 .programs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.75rem}
 .program{
@@ -490,7 +490,7 @@ body.nav-open{overflow:hidden}
 .stat--pledge .stat__sub{margin-top:.35rem;line-height:1.55}
 
 /* ============================================================
-   Gallery + testimonials
+   Galri + testimonials
    ============================================================ */
 .gallery{display:grid;grid-template-columns:1fr;gap:1rem}
 @media (min-width:380px){.gallery{grid-template-columns:repeat(2,1fr)}}
@@ -573,7 +573,7 @@ body.nav-open{overflow:hidden}
 .involve__item p{margin:0;font-size:.94rem;color:var(--ink-soft)}
 
 /* ============================================================
-   Contact
+   Kontakte nou
    ============================================================ */
 .contact-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(1.5rem,3vw,3rem);align-items:start}
 @media (max-width:880px){.contact-grid{grid-template-columns:1fr}}
@@ -743,27 +743,27 @@ body{top:0!important}
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to main content</a>
+<a class="skip-link" href="#main">Ale dirèk nan kontni prensipal la</a>
 
 <!-- ============================ HEADER ============================ -->
 <header class="header" id="header">
   <div class="header__inner">
-    <a class="brand" href="#home" aria-label="Ti kreyon espwa — home">
-      <img class="brand__mark" src="assets/img/logo-mark.png" alt="" width="165" height="220" decoding="async">
+    <a class="brand" href="#home" aria-label="Ti kreyon espwa — Akèy">
+      <img class="brand__mark" src="/assets/img/logo-mark.png" alt="" width="165" height="220" decoding="async">
       <span class="brand__text">
         <span class="brand__name notranslate" translate="no" lang="ht">Ti kreyon espwa</span>
-        <span class="brand__tag">Haiti</span>
+        <span class="brand__tag">Ayiti</span>
       </span>
     </a>
 
-    <nav class="nav" id="nav" aria-label="Main navigation">
-      <a href="#mission">Mission</a>
-      <a href="#programs">Programs</a>
-      <a href="#impact">Our work</a>
-      <a href="#stories">Gallery</a>
-      <a href="#support">Support us</a>
-      <a href="#contact">Contact</a>
-      <a class="nav__donate" href="#support">Donate</a>
+    <nav class="nav" id="nav" aria-label="Menu prensipal">
+      <a href="#mission">Misyon</a>
+      <a href="#programs">Pwogram</a>
+      <a href="#impact">Travay nou</a>
+      <a href="#stories">Galri</a>
+      <a href="#support">Sipòte nou</a>
+      <a href="#contact">Kontakte nou</a>
+      <a class="nav__donate" href="#support">Fè don</a>
     </nav>
 
     <div class="header__actions">
@@ -773,19 +773,19 @@ body{top:0!important}
             <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/>
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
-          <span id="langCurrent">EN</span>
+          <span id="langCurrent">HT</span>
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
           <span class="sr-only">Change language</span>
         </button>
         <ul class="lang__menu" id="langMenu" role="menu" aria-labelledby="langToggle">
-          <li role="none"><button role="menuitem" type="button" data-lang="en" aria-current="true">English <span class="lang__native">English</span>
-            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></button></li>
-          <li role="none"><a role="menuitem" href="/ht/" hreflang="ht" lang="ht">Haitian Creole <span class="lang__native">Kreyòl</span>
+          <li role="none"><a role="menuitem" href="/" hreflang="en" lang="en">English <span class="lang__native">English</span>
             <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></a></li>
-          <li role="none"><button role="menuitem" type="button" data-lang="fr">French <span class="lang__native">Français</span>
-            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></button></li>
-          <li role="none"><button role="menuitem" type="button" data-lang="es">Spanish <span class="lang__native">Español</span>
-            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></button></li>
+          <li role="none"><a role="menuitem" href="/ht/" hreflang="ht" lang="ht" aria-current="true">Kreyòl ayisyen <span class="lang__native">Kreyòl</span>
+            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></a></li>
+          <li role="none"><a role="menuitem" href="/?lang=fr" hreflang="fr" lang="fr">Fransè <span class="lang__native">Français</span>
+            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></a></li>
+          <li role="none"><a role="menuitem" href="/?lang=es" hreflang="es" lang="es">Panyòl <span class="lang__native">Español</span>
+            <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></a></li>
         </ul>
       </div>
 
@@ -793,10 +793,10 @@ body{top:0!important}
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7 7-7z"/>
         </svg>
-        Donate
+        Fè don
       </a>
 
-      <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Louvri menu">
         <svg class="ico ico--menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <svg class="ico ico--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
@@ -811,7 +811,7 @@ body{top:0!important}
 
   <!-- ============================ HERO ============================ -->
   <section class="hero" id="home">
-    <div class="hero__photo" role="img" aria-label="A smiling Haitian child holding a pencil over an open notebook"></div>
+    <div class="hero__photo" role="img" aria-label="Yon timoun ayisyen ki souri, k ap kenbe yon kreyon anlè yon kaye ki louvri"></div>
     <div class="hero__veil"></div>
     <div class="hero__blobs" aria-hidden="true">
       <svg class="blob-1" viewBox="0 0 200 200" fill="currentColor"><path d="M40.9 -63.6C54.5 -55.9 68 -46.6 74.6 -33.6C81.1 -20.6 80.7 -3.9 76.3 11.1C71.9 26.1 63.6 39.4 52.3 50.5C41 61.6 26.8 70.5 11.1 74.6C-4.6 78.7 -21.8 78 -35.9 71.1C-50 64.2 -61 51.1 -68.6 36.5C-76.2 21.9 -80.4 5.8 -78.2 -9.4C-76 -24.6 -67.4 -38.9 -55.7 -47.6C-44 -56.3 -29.2 -59.4 -15.3 -63.9C-1.4 -68.4 11.6 -74.3 24.3 -73.1C37 -71.9 49.4 -63.6 40.9 -63.6Z" transform="translate(100 100)"/></svg>
@@ -822,51 +822,50 @@ body{top:0!important}
       <div class="hero__text">
         <span class="hero__badge">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.8-5 4.7 1.3 6.8L12 17.3 6 20.6l1.3-6.8-5-4.7 6.8-.8L12 2z"/></svg>
-          A Haitian non-profit for children
+          Yon òganizasyon ayisyen san bi likratif pou timoun
         </span>
 
-        <h1>Every child deserves a <span class="accent">pencil</span> and a reason to hope.</h1>
+        <h1>Chak timoun merite yon <span class="accent">kreyon</span> ak yon rezon pou espere.</h1>
 
         <div class="motto">
-          <p class="motto__kr notranslate" translate="no" lang="ht">&laquo;&nbsp;Chak timoun gen yon bèl istwa pou l ekri.&nbsp;&raquo;</p>
-          <p class="motto__en">Every child has a beautiful story to write.</p>
+          <p class="motto__kr notranslate" translate="no" lang="ht">« Chak timoun gen yon bèl istwa pou l ekri. »</p>
         </div>
 
         <p class="lead" style="color:rgba(255,255,255,.92)">
-          <span class="notranslate" translate="no" lang="ht">Ti kreyon espwa</span> walks alongside vulnerable children across Haiti &mdash; with school supplies, warm meals and safe spaces where they can create, speak and heal.
+          <span class="notranslate" translate="no" lang="ht">Ti kreyon espwa</span> mache bò kote timoun ki vilnerab toupatou an Ayiti — ak sak lekòl, repa cho ak kote ki an sekirite kote yo ka kreye, pale ak geri.
         </p>
 
         <div class="hero__cta">
           <a class="btn btn--sun" href="#support">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7 7-7z"/></svg>
-            Make a donation
+            Fè yon don
           </a>
           <a class="btn btn--ghost" href="#involve">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11h-6M19 8v6"/></svg>
-            Get involved
+            Anplike w
           </a>
         </div>
 
         <p class="hero__note">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-          Every gift is tracked. Ask us what yours paid for &mdash; we will tell you.
+          Nou swiv chak don. Mande nou kisa pa w te peye — n ap di w.
         </p>
       </div>
 
       <div class="hero__card">
-        <h2>What we do, every week</h2>
+        <h2>Sa n ap fè, chak semèn</h2>
         <ul class="hero__list">
           <li>
             <span class="ico-badge"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
-            <span><b class="notranslate" translate="no" lang="ht">Sak Lekòl</b><span>School bags, supplies and reading corners so no child stays home for lack of a notebook.</span></span>
+            <span><b class="notranslate" translate="no" lang="ht">Sak Lekòl</b><span>Sak lekòl, founiti ak kwen lekti pou pa gen timoun ki rete lakay paske li pa gen kaye.</span></span>
           </li>
           <li>
             <span class="ico-badge"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="19" r="2.5"/><path d="M12 2a10 10 0 1 0 0 20c1.1 0 2-.9 2-2 0-1.4-1-1.6-1-2.5 0-.8.7-1.5 1.5-1.5H17a5 5 0 0 0 5-5c0-5-4.5-9-10-9z"/></svg></span>
-            <span><b>Creative workshops</b><span>Drawing, painting and storytelling sessions where children put words on what they carry.</span></span>
+            <span><b>Atelye kreyatif</b><span>Sesyon desen, penti ak rakonte istwa kote timoun yo mete mo sou sa yo pote nan kè yo.</span></span>
           </li>
           <li>
             <span class="ico-badge"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg></span>
-            <span><b class="notranslate" translate="no" lang="ht">Vant Plen</b><span>Hot meals and hygiene kits, because a hungry child cannot learn.</span></span>
+            <span><b class="notranslate" translate="no" lang="ht">Vant Plen</b><span>Repa cho ak twous ijyèn, paske yon timoun ki grangou pa ka aprann.</span></span>
           </li>
         </ul>
       </div>
@@ -883,13 +882,11 @@ body{top:0!important}
       <div class="section-head center reveal">
         <span class="eyebrow">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-          Who we are
+          Kiyès nou ye
         </span>
-        <h2 id="mission-title">A small pencil, a whole lot of hope</h2>
+        <h2 id="mission-title">Yon ti kreyon, anpil espwa</h2>
         <p class="lead">
-          <span class="notranslate" translate="no" lang="ht">Ti kreyon espwa</span> was born in Haiti, out of a simple conviction:
-          a child holding a pencil is a child holding their own future. Our name says it &mdash; a small pencil,
-          and hope: the child's, and their community's.
+          <span class="notranslate" translate="no" lang="ht">Ti kreyon espwa</span> fèt an Ayiti, ak yon konviksyon senp: yon timoun ki kenbe yon kreyon se yon timoun ki kenbe pwòp avni l. Non nou di l — yon ti kreyon, ak espwa: espwa timoun nan, ak espwa kominote l.
         </p>
       </div>
 
@@ -898,15 +895,12 @@ body{top:0!important}
           <div class="card__icon i-azure">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/><path d="M9 12l2 2 4-4"/></svg>
           </div>
-          <h3>Our mission</h3>
+          <h3>Misyon nou</h3>
           <p>
-            To support vulnerable children in Haiti by giving them access to education,
-            proper nutrition and spaces for creative expression &mdash; so that poverty never becomes the reason a
-            child stops dreaming.
+            Sipòte timoun ki vilnerab an Ayiti lè n ba yo aksè nan edikasyon, bon nitrisyon ak kote pou yo eksprime kreyativite yo — pou povrete pa janm vin rezon ki fè yon timoun sispann reve.
           </p>
           <p>
-            We work close to families, schools and local leaders, one neighbourhood at a time, with full
-            transparency on where every gourde and every dollar goes.
+            Nou travay pre fanmi, lekòl ak lidè lokal yo, yon katye apre lòt, ak transparans total sou kote chak goud ak chak dola ale.
           </p>
         </article>
 
@@ -914,14 +908,12 @@ body{top:0!important}
           <div class="card__icon i-sun">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           </div>
-          <h3>Our vision</h3>
+          <h3>Vizyon nou</h3>
           <p>
-            A Haiti where every child &mdash; whatever their neighbourhood, whatever their family's income &mdash;
-            grows up fed, in school, and free to tell their own story.
+            Yon Ayiti kote chak timoun — kèlkeswa katye l, kèlkeswa revni fanmi l — grandi byen manje, ale lekòl, epi lib pou rakonte pwòp istwa l.
           </p>
           <p>
-            We are building a generation of children who read, draw, speak up, and become the adults their
-            community is waiting for.
+            N ap bati yon jenerasyon timoun ki li, ki desine, ki pale, epi ki vin granmoun kominote a ap tann.
           </p>
         </article>
       </div>
@@ -929,19 +921,19 @@ body{top:0!important}
       <div class="values">
         <div class="value reveal">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-          <span><b>Dignity first</b><span>Children are actors of their own story, never a display of misery.</span></span>
+          <span><b>Diyite an premye</b><span>Timoun yo se aktè pwòp istwa yo, pa janm yon espektak mizè.</span></span>
         </div>
         <div class="value reveal d1">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-          <span><b>Local roots</b><span>Led by Haitians, in Haitian Creole, with the families we serve.</span></span>
+          <span><b>Rasin lokal</b><span>Dirije pa Ayisyen, an Kreyòl ayisyen, ansanm ak fanmi n ap sèvi yo.</span></span>
         </div>
         <div class="value reveal d2">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-          <span><b>Transparency</b><span>Every donation is tracked and reported back to those who gave it.</span></span>
+          <span><b>Transparans</b><span>Chak don swivi, epi nou voye rapò bay moun ki te fè l.</span></span>
         </div>
         <div class="value reveal d3">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-          <span><b>Continuity</b><span>We stay. Real change is measured in school years, not in single visits.</span></span>
+          <span><b>Kontinite</b><span>Nou rete. Chanjman reyèl mezire nan ane lekòl, pa nan vizit sèlman.</span></span>
         </div>
       </div>
     </div>
@@ -953,14 +945,14 @@ body{top:0!important}
       <div class="section-head center reveal">
         <span class="eyebrow eyebrow--sun">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
-          What we do
+          Sa n ap fè
         </span>
-        <h2 id="programs-title">Three pillars, one child at a time</h2>
-        <p class="lead">Education, creative healing and nutrition are not separate needs &mdash; a child needs all three at once. So we deliver all three, together.</p>
+        <h2 id="programs-title">Twa poto, yon timoun apre lòt</h2>
+        <p class="lead">Edikasyon, gerizon pa atizay ak nitrisyon pa separe — yon timoun bezwen twa yo ansanm. Se sa k fè n ba yo twa yo, an menm tan.</p>
       </div>
 
       <div class="programs">
-        <!-- Education -->
+        <!-- Edikasyon -->
         <article class="program program--edu reveal">
           <div class="program__media">
             <svg class="program__ph" viewBox="0 0 120 120" fill="none" aria-hidden="true">
@@ -969,18 +961,18 @@ body{top:0!important}
               <path d="M60 44v46" stroke="rgba(0,90,141,.45)" stroke-width="3"/>
               <path d="M84 20l8 8-30 30-11 3 3-11L84 20z" fill="#FFB703"/>
             </svg>
-            <img src="assets/img/education.jpg" alt="Illustration: children receiving school bags and supplies" loading="lazy" width="800" height="600" onerror="this.remove()">
+            <img src="/assets/img/education.jpg" alt="Ilistrasyon: timoun k ap resevwa sak lekòl ak founiti" loading="lazy" width="800" height="600" onerror="this.remove()">
             <span class="program__ribbon notranslate" translate="no" lang="ht">Sak Lekòl</span>
           </div>
           <div class="program__body">
-            <p class="program__kicker">Education</p>
-            <h3>School supplies &amp; learning</h3>
-            <p>Nothing should stand between a child and a classroom &mdash; least of all the price of a notebook.</p>
+            <p class="program__kicker">Edikasyon</p>
+            <h3>Founiti lekòl ak aprantisaj</h3>
+            <p>Pa dwe gen anyen ki bloke yon timoun pou l antre nan klas — sitou pa pri yon kaye.</p>
             <ul class="program__list">
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Full school kits: bag, notebooks, pencils, uniform</span></li>
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Scholarships covering a full school year</span></li>
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Mini-libraries and reading corners in the neighbourhood</span></li>
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Homework support with volunteer tutors</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Sak lekòl konplè: sak, kaye, kreyon, inifòm</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Bous pou kouvri yon ane lekòl konplè</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Ti bibliyotèk ak kwen lekti nan katye yo</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Sipò pou devwa ak pwofesè volontè</span></li>
             </ul>
           </div>
         </article>
@@ -993,18 +985,18 @@ body{top:0!important}
               <circle cx="44" cy="42" r="6" fill="#0077B6"/><circle cx="66" cy="34" r="6" fill="#2A9D8F"/>
               <circle cx="82" cy="52" r="6" fill="#F4A261"/><circle cx="42" cy="66" r="6" fill="#00B4D8"/>
             </svg>
-            <img src="assets/img/creativity.jpg" alt="Illustration: children sitting in a circle, drawing and painting together" loading="lazy" width="800" height="600" onerror="this.remove()">
-            <span class="program__ribbon">Creative workshops</span>
+            <img src="/assets/img/creativity.jpg" alt="Ilistrasyon: timoun ki chita an sèk, k ap desine ak pentire ansanm" loading="lazy" width="800" height="600" onerror="this.remove()">
+            <span class="program__ribbon">Atelye kreyatif</span>
           </div>
           <div class="program__body">
-            <p class="program__kicker">Creative development</p>
-            <h3>Art, expression &amp; healing</h3>
-            <p>Many of our children have seen too much. Art gives them a language when words are still too heavy.</p>
+            <p class="program__kicker">Devlopman kreyatif</p>
+            <h3>Atizay, ekspresyon ak gerizon</h3>
+            <p>Anpil nan timoun nou yo wè twòp bagay. Atizay ba yo yon lang lè mo yo twò lou pou soti.</p>
             <ul class="program__list">
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Weekly drawing and painting workshops</span></li>
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Storytelling and writing circles in Haitian Creole</span></li>
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Music, dance and theatre sessions</span></li>
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Emotional support with trained facilitators</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Atelye desen ak penti chak semèn</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Sèk rakonte istwa ak ekriti an Kreyòl ayisyen</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Sesyon mizik, dans ak teyat</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Sipò emosyonèl ak animatè ki fòme</span></li>
             </ul>
           </div>
         </article>
@@ -1018,18 +1010,18 @@ body{top:0!important}
               <path d="M46 40c0-8 14-8 14-16M62 44c0-8 14-8 14-16" stroke="rgba(255,255,255,.9)" stroke-width="4" stroke-linecap="round"/>
               <path d="M14 74h92" stroke="#FFB703" stroke-width="5" stroke-linecap="round"/>
             </svg>
-            <img src="assets/img/nutrition.jpg" alt="Illustration: hot meals being served at a community canteen" loading="lazy" width="800" height="600" onerror="this.remove()">
+            <img src="/assets/img/nutrition.jpg" alt="Ilistrasyon: repa cho k ap sèvi nan yon kantin kominotè" loading="lazy" width="800" height="600" onerror="this.remove()">
             <span class="program__ribbon notranslate" translate="no" lang="ht">Vant Plen</span>
           </div>
           <div class="program__body">
-            <p class="program__kicker">Nutrition &amp; health</p>
-            <h3>Warm meals &amp; hygiene</h3>
-            <p>An empty stomach cannot hold a lesson. <span class="notranslate" translate="no" lang="ht">Vant Plen</span> keeps children fed, healthy and present.</p>
+            <p class="program__kicker">Nitrisyon ak sante</p>
+            <h3>Repa cho ak ijyèn</h3>
+            <p>Yon vant vid pa ka kenbe yon leson. <span class="notranslate" translate="no" lang="ht">Vant Plen</span> kenbe timoun yo byen manje, an sante epi prezan.</p>
             <ul class="program__list">
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Hot meals served on workshop and school days</span></li>
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Hygiene kits: soap, toothbrush, sanitary supplies</span></li>
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Clean drinking water at every activity</span></li>
-              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Health check-ups and referrals for the most fragile</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Repa cho sèvi nan jou atelye ak jou lekòl</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Twous ijyèn: savon, bwòs dan, pwodwi sanitè</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Dlo pwòp pou bwè nan chak aktivite</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Tcheke sante ak referans pou timoun ki pi frajil yo</span></li>
             </ul>
           </div>
         </article>
@@ -1043,10 +1035,10 @@ body{top:0!important}
       <div class="section-head center reveal">
         <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#fff">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.8-5 4.7 1.3 6.8L12 17.3 6 20.6l1.3-6.8-5-4.7 6.8-.8L12 2z"/></svg>
-          How we work
+          Kijan n ap travay
         </span>
-        <h2 id="impact-title">Small, close, and accountable</h2>
-        <p class="lead">We would rather show you how we work than impress you with numbers we cannot back up. Here is what we commit to.</p>
+        <h2 id="impact-title">Piti, pre, epi responsab</h2>
+        <p class="lead">Nou prefere montre w kijan n ap travay olye n enpresyone w ak chif nou pa ka pwouve. Men sa n angaje n pou.</p>
       </div>
 
       <!--
@@ -1057,7 +1049,7 @@ body{top:0!important}
           <div class="stat reveal">
             <span class="stat__num" data-count="120" data-suffix="+">0</span>
             <span class="stat__label">Children supported</span>
-            <span class="stat__sub">Across Haiti</span>
+            <span class="stat__sub">Across Ayiti</span>
           </div>
 
         Publish only figures you can justify if a donor or a partner asks for the proof.
@@ -1065,23 +1057,23 @@ body{top:0!important}
       <div class="stats">
         <div class="stat stat--pledge reveal">
           <svg class="stat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span class="stat__label">Close to the children</span>
-          <span class="stat__sub">We work in Haiti, with families we know by name &mdash; not through a distant office.</span>
+          <span class="stat__label">Pre timoun yo</span>
+          <span class="stat__sub">Nou travay an Ayiti, ak fanmi nou konnen non yo — pa nan yon biwo ki lwen.</span>
         </div>
         <div class="stat stat--pledge reveal d1">
           <svg class="stat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          <span class="stat__label">Dignity first</span>
-          <span class="stat__sub">No child's face and no family's hardship is used to raise money. Ever.</span>
+          <span class="stat__label">Diyite an premye</span>
+          <span class="stat__sub">Nou pa janm sèvi figi yon timoun ni difikilte yon fanmi pou fè apèl pou lajan. Janm.</span>
         </div>
         <div class="stat stat--pledge reveal d2">
           <svg class="stat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg>
-          <span class="stat__label">Every gift tracked</span>
-          <span class="stat__sub">Ask what your donation paid for and we send you the answer, with the receipts.</span>
+          <span class="stat__label">Chak don swivi</span>
+          <span class="stat__sub">Mande kisa don ou te peye, n ap voye repons lan ba ou, avèk resi yo.</span>
         </div>
         <div class="stat stat--pledge reveal d3">
           <svg class="stat__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          <span class="stat__label">Led locally</span>
-          <span class="stat__sub">Haitian teachers, artists and neighbours run the programmes, week after week.</span>
+          <span class="stat__label">Dirije sou plas</span>
+          <span class="stat__sub">Pwofesè ayisyen, atis ak vwazen k ap mennen pwogram yo, chak semèn.</span>
         </div>
       </div>
     </div>
@@ -1093,12 +1085,11 @@ body{top:0!important}
       <div class="section-head center reveal">
         <span class="eyebrow eyebrow--leaf">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9" r="1.8"/><path d="M21 15l-5-5-9 9"/></svg>
-          Gallery
+          Galri
         </span>
-        <h2 id="stories-title">What our weeks look like</h2>
+        <h2 id="stories-title">Semèn nou yo sanble sa</h2>
         <p class="lead">
-          Illustrations of our programmes &mdash; school days, workshops, shared meals.
-          They are not photographs of the children we serve, and that is a deliberate choice.
+          Ilistrasyon pwogram nou yo — jou lekòl, atelye, repa pataje. Se pa foto timoun n ap sèvi yo, epi se yon chwa nou fè.
         </p>
       </div>
 
@@ -1106,39 +1097,39 @@ body{top:0!important}
         <!-- REPLACE: drop gallery-1.jpg … gallery-6.jpg into assets/img/ -->
         <figure class="shot">
           <svg class="shot__ph" viewBox="0 0 64 64" fill="none" stroke="rgba(255,255,255,.95)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="52" height="38" rx="5"/><circle cx="32" cy="33" r="10"/><path d="M22 14l4-6h12l4 6"/></svg>
-          <img src="assets/img/gallery-1.jpg" alt="Illustration: a child writing in a new notebook" loading="lazy" width="600" height="600" onerror="this.remove()">
-          <figcaption class="shot__cap">School kit distribution</figcaption>
+          <img src="/assets/img/gallery-1.jpg" alt="Ilistrasyon: yon timoun k ap ekri nan yon nouvo kaye" loading="lazy" width="600" height="600" onerror="this.remove()">
+          <figcaption class="shot__cap">Distribisyon sak lekòl</figcaption>
         </figure>
         <figure class="shot">
           <svg class="shot__ph" viewBox="0 0 64 64" fill="none" stroke="rgba(255,255,255,.95)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="52" height="38" rx="5"/><circle cx="32" cy="33" r="10"/><path d="M22 14l4-6h12l4 6"/></svg>
-          <img src="assets/img/gallery-2.jpg" alt="Illustration: children painting during a creative workshop" loading="lazy" width="600" height="600" onerror="this.remove()">
-          <figcaption class="shot__cap">Painting workshop</figcaption>
+          <img src="/assets/img/gallery-2.jpg" alt="Ilistrasyon: timoun k ap pentire nan yon atelye kreyatif" loading="lazy" width="600" height="600" onerror="this.remove()">
+          <figcaption class="shot__cap">Atelye penti</figcaption>
         </figure>
         <figure class="shot">
           <svg class="shot__ph" viewBox="0 0 64 64" fill="none" stroke="rgba(255,255,255,.95)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="52" height="38" rx="5"/><circle cx="32" cy="33" r="10"/><path d="M22 14l4-6h12l4 6"/></svg>
-          <img src="assets/img/gallery-3.jpg" alt="Illustration: a volunteer serving a hot meal" loading="lazy" width="600" height="600" onerror="this.remove()">
-          <figcaption class="shot__cap">Meal service</figcaption>
+          <img src="/assets/img/gallery-3.jpg" alt="Ilistrasyon: yon volontè k ap sèvi yon repa cho" loading="lazy" width="600" height="600" onerror="this.remove()">
+          <figcaption class="shot__cap">Sèvis repa</figcaption>
         </figure>
         <figure class="shot">
           <svg class="shot__ph" viewBox="0 0 64 64" fill="none" stroke="rgba(255,255,255,.95)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="52" height="38" rx="5"/><circle cx="32" cy="33" r="10"/><path d="M22 14l4-6h12l4 6"/></svg>
-          <img src="assets/img/gallery-4.jpg" alt="Illustration: a reading corner with children choosing books" loading="lazy" width="600" height="600" onerror="this.remove()">
-          <figcaption class="shot__cap">Reading corner</figcaption>
+          <img src="/assets/img/gallery-4.jpg" alt="Ilistrasyon: yon kwen lekti ak timoun k ap chwazi liv" loading="lazy" width="600" height="600" onerror="this.remove()">
+          <figcaption class="shot__cap">Kwen lekti</figcaption>
         </figure>
         <figure class="shot">
           <svg class="shot__ph" viewBox="0 0 64 64" fill="none" stroke="rgba(255,255,255,.95)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="52" height="38" rx="5"/><circle cx="32" cy="33" r="10"/><path d="M22 14l4-6h12l4 6"/></svg>
-          <img src="assets/img/gallery-5.jpg" alt="Illustration: children and volunteers together" loading="lazy" width="600" height="600" onerror="this.remove()">
-          <figcaption class="shot__cap">Working side by side</figcaption>
+          <img src="/assets/img/gallery-5.jpg" alt="Ilistrasyon: timoun ak volontè yo ansanm" loading="lazy" width="600" height="600" onerror="this.remove()">
+          <figcaption class="shot__cap">N ap travay bò kote youn ak lòt</figcaption>
         </figure>
         <figure class="shot">
           <svg class="shot__ph" viewBox="0 0 64 64" fill="none" stroke="rgba(255,255,255,.95)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="52" height="38" rx="5"/><circle cx="32" cy="33" r="10"/><path d="M22 14l4-6h12l4 6"/></svg>
-          <img src="assets/img/gallery-6.jpg" alt="Illustration: children walking to school in the morning light" loading="lazy" width="600" height="600" onerror="this.remove()">
-          <figcaption class="shot__cap">First day of school</figcaption>
+          <img src="/assets/img/gallery-6.jpg" alt="Ilistrasyon: timoun k ap mache lekòl nan limyè maten an" loading="lazy" width="600" height="600" onerror="this.remove()">
+          <figcaption class="shot__cap">Premye jou lekòl</figcaption>
         </figure>
       </div>
 
       <p class="ai-note reveal">
         <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-        AI-generated illustrations. We do not publish photographs of the children in our programmes.
+        Ilistrasyon ki fèt ak IA. Nou pa pibliye foto timoun ki nan pwogram nou yo.
       </p>
 
       <!--
@@ -1149,21 +1140,16 @@ body{top:0!important}
       <div class="quotes">
         <article class="quote reveal">
           <svg class="ico-quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <h3>Why you will not see their faces</h3>
+          <h3>Poukisa ou pa wè figi yo</h3>
           <p>
-            The images on this site are AI-generated illustrations. A photograph of a child in need
-            of help follows that child for life &mdash; online, at school, into adulthood. We are not
-            willing to trade that for a donation. The programmes and the needs are real;
-            the faces are not, and we would rather say so plainly.
+            Imaj sou sit sa a se ilistrasyon ki fèt ak IA. Yon foto yon timoun ki nan bezwen swiv li tout lavi l — sou entènèt, nan lekòl, rive granmoun. Nou pa dakò fè echanj sa pou yon don. Pwogram yo ak bezwen yo reyèl; figi yo pa reyèl, epi nou prefere di sa klè.
           </p>
         </article>
         <article class="quote reveal d1">
           <svg class="ico-quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-          <h3>What we will show you</h3>
+          <h3>Sa n ap montre w</h3>
           <p>
-            Instead of children's portraits: what your gift bought, when, and for how many. Write to
-            us and we send the breakdown &mdash; school kits, meals served, workshop materials &mdash;
-            with the receipts behind it. Partners and institutions can request the same on paper.
+            Olye pòtrè timoun: sa don ou te achte, kilè, ak pou konbyen moun. Ekri nou n ap voye detay la ba ou — sak lekòl, repa ki sèvi, materyèl atelye — avèk resi yo. Patenè ak enstitisyon ka mande menm bagay la sou papye.
           </p>
         </article>
       </div>
@@ -1176,12 +1162,11 @@ body{top:0!important}
       <div class="section-head center reveal">
         <span class="eyebrow">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7 7-7z"/></svg>
-          Support us
+          Sipòte nou
         </span>
-        <h2 id="support-title">Give a pencil, give a future</h2>
+        <h2 id="support-title">Bay yon kreyon, bay yon avni</h2>
         <p class="lead">
-          A school kit costs about <b>25&nbsp;USD</b>. A month of hot meals for one child, about <b>15&nbsp;USD</b>.
-          Whatever you give lands directly in a child's hands in Haiti.
+          Yon sak lekòl koute anviwon <b>25 USD</b>. Yon mwa repa cho pou yon timoun, anviwon <b>15 USD</b>. Nenpòt sa ou bay rive dirèk nan men yon timoun an Ayiti.
         </p>
       </div>
 
@@ -1191,22 +1176,22 @@ body{top:0!important}
           <div class="card__icon i-azure">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
           </div>
-          <h3>Donate by card or PayPal</h3>
-          <p>The fastest way to give from anywhere in the world &mdash; card, PayPal balance or bank account. Secure checkout on PayPal.</p>
+          <h3>Fè don ak kat oswa PayPal</h3>
+          <p>Fason ki pi rapid pou bay kòb de nenpòt kote nan mond lan — kat, sòl PayPal oswa kont labank. Peman an sekirize sou PayPal.</p>
           <!-- REPLACE: your real PayPal.me or donation link -->
           <a class="btn btn--sun" href="https://www.paypal.com/paypalme/REPLACE-ME" target="_blank" rel="noopener noreferrer">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
-            Give with PayPal
+            Bay ak PayPal
           </a>
         </article>
 
-        <!-- Bank transfer -->
+        <!-- Transfè labank -->
         <article class="give__card reveal d1">
           <div class="card__icon i-leaf">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 10v9M19 10v9M9 10v9M15 10v9"/><path d="M2 21h20"/></svg>
           </div>
-          <h3>Bank transfer</h3>
-          <p>For larger gifts, recurring support or institutional partners.</p>
+          <h3>Transfè labank</h3>
+          <p>Pou pi gwo don, sipò regilye oswa patenè enstitisyonèl.</p>
           <!-- REPLACE: your real bank details -->
           <ul class="bank notranslate" translate="no">
             <li><span>Account name</span><span>Ti kreyon espwa</span></li>
@@ -1217,7 +1202,7 @@ body{top:0!important}
           </ul>
           <a class="btn btn--outline" href="#contact">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg>
-            Request a receipt
+            Mande yon resi
           </a>
         </article>
 
@@ -1226,15 +1211,15 @@ body{top:0!important}
           <div class="card__icon i-sun">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
           </div>
-          <h3>Give by phone</h3>
-          <p>Prefer to talk to a human, or give from Haiti? Call or message our donation line &mdash; we will walk you through it.</p>
+          <h3>Bay kòb pa telefòn</h3>
+          <p>Ou prefere pale ak yon moun, oswa bay kòb depi Ayiti? Rele oswa ekri nan liy don nou an — n ap gide w.</p>
           <ul class="bank notranslate" translate="no">
             <li><span>Donation line</span><span>+1 407 664 0650</span></li>
-            <li><span>Hours</span><span>Mon&ndash;Sat, 8am&ndash;6pm (EST)</span></li>
+            <li><span>Hours</span><span>Mon–Sat, 8am–6pm (EST)</span></li>
           </ul>
           <a class="btn btn--azure" href="tel:+14076640650">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-            Call the donation line
+            Rele liy don an
           </a>
         </article>
       </div>
@@ -1243,22 +1228,22 @@ body{top:0!important}
         <div class="involve__item reveal">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 11h-6M19 8v6"/></svg>
           <div>
-            <h4>Become a volunteer</h4>
-            <p>Teachers, artists, nurses, students &mdash; on site in Haiti or remotely (design, translation, admin). Tell us what you can give.</p>
+            <h4>Vin volontè</h4>
+            <p>Pwofesè, atis, enfimyè, elèv — sou plas an Ayiti oswa adistans (design, tradiksyon, admin). Di nou sa ou ka bay.</p>
           </div>
         </div>
         <div class="involve__item reveal d1">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           <div>
-            <h4>Corporate partnership</h4>
-            <p>Sponsor a school year, fund a workshop cycle, or match your employees' gifts. We provide full reporting on the impact.</p>
+            <h4>Patenarya antrepriz</h4>
+            <p>Patwone yon ane lekòl, finanse yon sik atelye, oswa egalize don anplwaye ou yo. Nou bay rapò konplè sou enpak la.</p>
           </div>
         </div>
         <div class="involve__item reveal d2">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V4s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg>
           <div>
-            <h4>Sponsor a child</h4>
-            <p>Cover one child's school year, meals and workshops. You receive news, drawings and progress updates through the year.</p>
+            <h4>Patwone yon timoun</h4>
+            <p>Kouvri ane lekòl, repa ak atelye yon timoun. Ou resevwa nouvèl, desen ak rapò sou pwogrè li pandan tout ane a.</p>
           </div>
         </div>
       </div>
@@ -1271,51 +1256,51 @@ body{top:0!important}
       <div class="section-head center reveal">
         <span class="eyebrow eyebrow--leaf">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg>
-          Contact
+          Kontakte nou
         </span>
-        <h2 id="contact-title">Let's write the next chapter together</h2>
-        <p class="lead">A question, a partnership idea, an offer to help? Write to us &mdash; a real person answers, usually within two days.</p>
+        <h2 id="contact-title">Ann ekri pwochen chapit la ansanm</h2>
+        <p class="lead">Ou gen kesyon, yon lide patenarya, oswa ou vle ede? Ekri nou — yon moun reyèl ap reponn ou, anjeneral nan de jou.</p>
       </div>
 
       <div class="contact-grid">
         <!-- REPLACE: action="https://formspree.io/f/YOUR_FORM_ID" -->
         <form class="form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
           <div class="field">
-            <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+            <label for="name">Non ou <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="name" name="name" autocomplete="name" required maxlength="80" placeholder="Jean-Baptiste Pierre">
           </div>
           <div class="field">
-            <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+            <label for="email">Imèl <span class="req" aria-hidden="true">*</span></label>
             <input type="email" id="email" name="email" autocomplete="email" required maxlength="120" placeholder="you@example.com">
           </div>
           <div class="field">
-            <label for="topic">I am writing about</label>
+            <label for="topic">M ap ekri sou</label>
             <select id="topic" name="topic">
-              <option>A donation</option>
-              <option>Volunteering</option>
-              <option>A corporate partnership</option>
-              <option>Sponsoring a child</option>
-              <option>Something else</option>
+              <option>Yon don</option>
+              <option>Volontarya</option>
+              <option>Yon patenarya antrepriz</option>
+              <option>Patwonaj yon timoun</option>
+              <option>Lòt bagay</option>
             </select>
           </div>
           <div class="field">
-            <label for="message">Your message <span class="req" aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" required maxlength="2000" placeholder="Tell us how you would like to help, or what you would like to know."></textarea>
+            <label for="message">Mesaj ou <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required maxlength="2000" placeholder="Di nou kijan ou ta renmen ede, oswa sa ou ta renmen konnen."></textarea>
           </div>
 
           <!-- Honeypot: hidden from humans, filled by bots -->
           <div class="hp" aria-hidden="true">
-            <label for="website">Do not fill this field</label>
+            <label for="website">Pa ranpli jaden sa a</label>
             <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
           </div>
-          <input type="hidden" name="_subject" value="New message from tikreyonespwa.org">
+          <input type="hidden" name="_subject" value="New message from tikreyonespwa.org (Kreyòl)">
 
           <button class="btn btn--azure" type="submit" id="submitBtn">
             <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            Send message
+            Voye mesaj
           </button>
 
-          <p class="form__note">We never share your details. Fields marked <span class="req">*</span> are required.</p>
+          <p class="form__note">Nou pa janm pataje enfòmasyon ou. Jaden ki make <span class="req">*</span> obligatwa.</p>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
 
@@ -1324,15 +1309,15 @@ body{top:0!important}
             <div class="info__row">
               <span class="ico-badge"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
               <div>
-                <b>Where we work</b>
+                <b>Kote n ap travay</b>
                 <!-- REPLACE: exact street address if you have one -->
-                <span class="notranslate" translate="no">Haiti</span>
+                <span class="notranslate" translate="no">Ayiti</span>
               </div>
             </div>
             <div class="info__row">
               <span class="ico-badge"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg></span>
               <div>
-                <b>Email</b>
+                <b>Imèl</b>
                 <!-- REPLACE -->
                 <a href="mailto:administration@tikreyonespwa.org" class="notranslate" translate="no">administration@tikreyonespwa.org</a>
               </div>
@@ -1340,7 +1325,7 @@ body{top:0!important}
             <div class="info__row">
               <span class="ico-badge"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
               <div>
-                <b>Phone &amp; WhatsApp</b>
+                <b>Telefòn ak WhatsApp</b>
                 <!-- REPLACE -->
                 <a href="tel:+14076640650" class="notranslate" translate="no">+1 407 664 0650</a>
               </div>
@@ -1348,7 +1333,7 @@ body{top:0!important}
           </div>
 
           <div class="info__block">
-            <h3 style="font-size:1.1rem">Follow the children's stories</h3>
+            <h3 style="font-size:1.1rem">Swiv istwa timoun yo</h3>
             <div class="socials">
               <!-- REPLACE all three links -->
               <a class="social" href="https://facebook.com/REPLACE-ME" target="_blank" rel="noopener noreferrer">
@@ -1365,7 +1350,7 @@ body{top:0!important}
               </a>
             </div>
             <p style="margin:1.1rem 0 0;font-size:.92rem;color:var(--ink-soft)">
-              We never publish photographs of the children in our programmes. What you see here are illustrations.
+              Nou pa janm pibliye foto timoun ki nan pwogram nou yo. Sa ou wè la se ilistrasyon.
             </p>
           </div>
         </div>
@@ -1381,37 +1366,37 @@ body{top:0!important}
     <div class="footer__grid">
       <div>
         <div class="footer__logo">
-          <img src="assets/img/logo.png" width="460" height="466" loading="lazy" decoding="async"
+          <img src="/assets/img/logo.png" width="460" height="466" loading="lazy" decoding="async"
                alt="Ti kreyon espwa — Chak timoun gen yon bèl istwa pou l ekri.">
         </div>
-        <p class="footer__place">Haiti</p>
-        <p style="font-size:.9rem;margin:0">Every child has a beautiful story to write.</p>
+        <p class="footer__place">Ayiti</p>
+        <p style="font-size:.9rem;margin:0">« Chak timoun gen yon bèl istwa pou l ekri »</p>
       </div>
 
       <div>
-        <h4>Explore</h4>
+        <h4>Eksplore</h4>
         <ul>
-          <li><a href="#mission">Our mission</a></li>
-          <li><a href="#programs">Our programs</a></li>
-          <li><a href="#impact">How we work</a></li>
-          <li><a href="#stories">Gallery</a></li>
+          <li><a href="#mission">Misyon nou</a></li>
+          <li><a href="#programs">Pwogram nou yo</a></li>
+          <li><a href="#impact">Kijan n ap travay</a></li>
+          <li><a href="#stories">Galri</a></li>
         </ul>
       </div>
 
       <div>
-        <h4>Take action</h4>
+        <h4>Pase aksyon</h4>
         <ul>
-          <li><a href="#support">Make a donation</a></li>
-          <li><a href="#involve">Become a volunteer</a></li>
-          <li><a href="#involve">Corporate partnership</a></li>
-          <li><a href="#involve">Sponsor a child</a></li>
+          <li><a href="#support">Fè yon don</a></li>
+          <li><a href="#involve">Vin volontè</a></li>
+          <li><a href="#involve">Patenarya antrepriz</a></li>
+          <li><a href="#involve">Patwone yon timoun</a></li>
         </ul>
       </div>
 
       <div>
-        <h4>Reach us</h4>
+        <h4>Kontakte nou</h4>
         <ul class="notranslate" translate="no">
-          <li>Haiti</li>
+          <li>Ayiti</li>
           <li><a href="mailto:administration@tikreyonespwa.org">administration@tikreyonespwa.org</a></li>
           <li><a href="tel:+14076640650">+1 407 664 0650</a></li>
         </ul>
@@ -1419,12 +1404,12 @@ body{top:0!important}
     </div>
 
     <div class="footer__bottom">
-      <span class="notranslate" translate="no" lang="ht">Ti kreyon espwa &copy; <span id="year">2026</span> &mdash; All rights reserved</span>
-      <span class="made">Made with
+      <span class="notranslate" translate="no" lang="ht">Ti kreyon espwa © <span id="year">2026</span> — All rights reserved</span>
+      <span class="made">Fèt ak
         <svg class="ico-heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7 7-7z"/>
         </svg>
-        <span class="sr-only">love</span> in Haiti</span>
+        <span class="sr-only">lanmou</span> an Ayiti</span>
     </div>
   </div>
 </footer>
@@ -1432,7 +1417,6 @@ body{top:0!important}
 <!-- Google Website Translator mount point (visually hidden, driven by the language menu).
      `inert` keeps its <select> out of the tab order and out of the accessibility tree,
      while our own script can still set its value and dispatch a change event. -->
-<div id="google_translate_element" inert aria-hidden="true"></div>
 
 <script>
 (function () {
@@ -1550,13 +1534,12 @@ body{top:0!important}
   }
 
   /* ============================================================
-     Language switcher — drives the Google Website Translator
+     Language switcher — plain links: Kreyòl is a hand-written page,
+     French and Spanish go back to the English page and let Google run there
      ============================================================ */
-  var LANG_KEY = "tk2e-lang";
   var langToggle = document.getElementById("langToggle");
   var langMenu = document.getElementById("langMenu");
-  var langCurrent = document.getElementById("langCurrent");
-  var langButtons = Array.prototype.slice.call(langMenu.querySelectorAll("button[data-lang]"));
+  var langLinks = Array.prototype.slice.call(langMenu.querySelectorAll("a[role=menuitem]"));
 
   var closeLangMenu = function (refocus) {
     if (!langMenu.classList.contains("is-open")) return;
@@ -1567,26 +1550,24 @@ body{top:0!important}
   var openLangMenu = function (focusIndex) {
     langMenu.classList.add("is-open");
     langToggle.setAttribute("aria-expanded", "true");
-    if (typeof focusIndex === "number" && langButtons[focusIndex]) langButtons[focusIndex].focus();
+    if (typeof focusIndex === "number" && langLinks[focusIndex]) langLinks[focusIndex].focus();
   };
 
   langToggle.addEventListener("click", function (e) {
     e.stopPropagation();
     if (langMenu.classList.contains("is-open")) closeLangMenu(false); else openLangMenu();
   });
-  // Down/Up on the toggle opens the menu straight onto the first/last language
   langToggle.addEventListener("keydown", function (e) {
     if (e.key === "ArrowDown") { e.preventDefault(); openLangMenu(0); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); openLangMenu(langButtons.length - 1); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); openLangMenu(langLinks.length - 1); }
   });
-  // Arrow keys, Home/End and Tab-out inside the menu
   langMenu.addEventListener("keydown", function (e) {
-    var idx = langButtons.indexOf(document.activeElement);
+    var idx = langLinks.indexOf(document.activeElement);
     if (idx === -1) return;
-    if (e.key === "ArrowDown") { e.preventDefault(); langButtons[(idx + 1) % langButtons.length].focus(); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); langButtons[(idx - 1 + langButtons.length) % langButtons.length].focus(); }
-    else if (e.key === "Home") { e.preventDefault(); langButtons[0].focus(); }
-    else if (e.key === "End") { e.preventDefault(); langButtons[langButtons.length - 1].focus(); }
+    if (e.key === "ArrowDown") { e.preventDefault(); langLinks[(idx + 1) % langLinks.length].focus(); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); langLinks[(idx - 1 + langLinks.length) % langLinks.length].focus(); }
+    else if (e.key === "Home") { e.preventDefault(); langLinks[0].focus(); }
+    else if (e.key === "End") { e.preventDefault(); langLinks[langLinks.length - 1].focus(); }
     else if (e.key === "Tab") closeLangMenu(false);
   });
   document.addEventListener("click", function (e) {
@@ -1596,95 +1577,10 @@ body{top:0!important}
     if (e.key === "Escape") closeLangMenu(true);
   });
 
-  var markCurrent = function (lang) {
-    langButtons.forEach(function (b) {
-      b.setAttribute("aria-current", String(b.getAttribute("data-lang") === lang));
-    });
-    langCurrent.textContent = lang.toUpperCase();
-    document.documentElement.setAttribute("lang", lang);
-  };
-
-  // Cookie form the Google widget reads: /<source>/<target>
-  var setTranslateCookie = function (lang) {
-    var value = lang === "en" ? "/en/en" : "/en/" + lang;
-    var host = location.hostname;
-    var expires = "; max-age=" + (60 * 60 * 24 * 365);
-    document.cookie = "googtrans=" + value + "; path=/" + expires;
-    if (host && host.indexOf(".") > -1) {
-      document.cookie = "googtrans=" + value + "; path=/; domain=." + host + expires;
-      document.cookie = "googtrans=" + value + "; path=/; domain=" + host + expires;
-    }
-  };
-
-  var applyLanguage = function (lang, reloadIfNeeded) {
-    setTranslateCookie(lang);
-    try { localStorage.setItem(LANG_KEY, lang); } catch (err) { /* private mode */ }
-    markCurrent(lang);
-
-    var isTranslated = /translated/.test(document.documentElement.className);
-
-    // Back to the source language: only a reload fully restores the original text
-    if (lang === "en") {
-      if (isTranslated && reloadIfNeeded) location.reload();
-      return;
-    }
-
-    var combo = document.querySelector(".goog-te-combo");
-    if (combo) {
-      combo.value = lang;
-      combo.dispatchEvent(new Event("change"));
-      // Google sometimes only listens to the legacy handler
-      if (typeof combo.onchange === "function") combo.onchange();
-      // The widget refuses the value while its options are still loading — cookie + reload always works
-      if (combo.value !== lang && reloadIfNeeded) location.reload();
-    } else if (reloadIfNeeded) {
-      // Widget not mounted (blocked or still loading): the cookie takes effect on reload
-      location.reload();
-    }
-  };
-
-  langButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      applyLanguage(btn.getAttribute("data-lang"), true);
-      closeLangMenu(true);
-    });
-  });
-
-  // Restore the visitor's previous choice once the widget is ready
-  window.googleTranslateElementInit = function () {
-    /* global google */
-    new google.translate.TranslateElement({
-      pageLanguage: "en",
-      includedLanguages: "en,fr,es",
-      autoDisplay: false
-    }, "google_translate_element");
-
-    // Someone arriving from the Kreyòl page with ?lang=fr expects French straight away
-    var asked = (location.search.match(/[?&]lang=(en|fr|es)(?:&|$)/) || [])[1];
-    var saved = asked || null;
-    if (!saved) {
-      try { saved = localStorage.getItem(LANG_KEY); } catch (err) { /* ignore */ }
-    }
-    // Kreyòl is a real page now, not a machine translation of this one
-    if (saved === "ht") saved = "en";
-
-    if (!saved || saved === "en") {
-      setTranslateCookie("en");   // clears any leftover googtrans from an older visit
-      markCurrent("en");
-      return;
-    }
-
-    var tries = 0;
-    var restore = setInterval(function () {
-      var combo = document.querySelector(".goog-te-combo");
-      if (combo) {
-        clearInterval(restore);
-        applyLanguage(saved, false);
-      } else if (++tries > 30) {
-        clearInterval(restore);
-      }
-    }, 200);
-  };
+  // Le visiteur qui arrive ici a choisi le kreyòl : on efface un éventuel
+  // cookie Google laissé par une visite précédente sur la page anglaise.
+  document.cookie = "googtrans=/en/en; path=/; max-age=" + (60 * 60 * 24 * 365);
+  try { localStorage.setItem("tk2e-lang", "ht"); } catch (err) { /* private mode */ }
 
   /* ---------- Contact form (Formspree, no redirect) ---------- */
   var form = document.getElementById("contactForm");
@@ -1744,7 +1640,6 @@ body{top:0!important}
 </script>
 
 <!-- Google Website Translator (no API key, no billing). The site works fully without it. -->
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 
 <!-- Structured data: helps Google show the org as a non-profit. REPLACE the domain,
      the social profiles and the phone number once they are final. -->
@@ -1754,10 +1649,10 @@ body{top:0!important}
   "@type": "NGO",
   "name": "Ti kreyon espwa",
   "alternateName": "Ti kreyon espwa — Chak timoun gen yon bèl istwa pou l ekri",
-  "url": "https://tikreyonespwa.org/",
+  "url": "https://tikreyonespwa.org/ht/",
   "logo": "https://tikreyonespwa.org/assets/img/logo.png",
   "image": "https://tikreyonespwa.org/assets/img/hero.jpg",
-  "slogan": "Every child has a beautiful story to write",
+  "slogan": "Chak timoun gen yon bèl istwa pou l ekri",
   "description": "Haitian non-profit supporting vulnerable children with education, nutrition and creative expression.",
   "foundingLocation": "Haiti",
   "areaServed": { "@type": "Place", "name": "Haiti" },
